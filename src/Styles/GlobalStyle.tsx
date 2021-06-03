@@ -8,9 +8,12 @@ export default createGlobalStyle`
    outline: 0;
  }
  body { 
-   background: #993399;
+   width: 100%;
+   max-width: 1200px;
+   background: #fff;
    color: #fff;
    -webkit-font-smoothing: antialiased;
+
  }
  body, input, button {
    font-family: 'Roboto' sans-serif;
@@ -24,5 +27,12 @@ export default createGlobalStyle`
    cursor: pointer;
    color: #fff;
    background: #993399;
+ }
+ Table th td {
+	border-bottom: .1rem solid #e1e1e1;
+	border-bottom: .1rem solid $color-quinary;
+	padding: 1.2rem 1.5rem;
+	text-align: left
+   ;
  }
 `;
