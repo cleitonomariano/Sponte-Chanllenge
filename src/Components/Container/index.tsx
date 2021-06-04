@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Container: React.FC = styled.div`
   margin: 0 auto;
   align-items: center;
-  width: 100%;
+  width: 90%;
   max-width: 600px;
   height: 100%;
   max-height: 700px;

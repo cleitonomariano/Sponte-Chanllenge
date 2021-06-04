@@ -7,6 +7,7 @@ const firebaseConfig = {
   messagingSenderId: '571732822722',
   appId: '1:571732822722:web:89929ac11e770d4b88895b',
 };
-// Initialize Firebase
 // eslint-disable-next-line no-undef
-firebase.initializeApp(firebaseConfig);
+const fireDb = firebase.initializeApp(firebaseConfig);
+
+export default fireDb.database().ref();
