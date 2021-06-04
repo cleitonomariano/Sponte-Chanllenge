@@ -23,16 +23,36 @@ export default createGlobalStyle`
    font-weight: 500;
    color: #fff;
  }
- button {
-   cursor: pointer;
-   color: #fff;
-   background: #993399;
- }
  Table th td {
 	border-bottom: .1rem solid #e1e1e1;
 	border-bottom: .1rem solid $color-quinary;
 	padding: 1.2rem 1.5rem;
 	text-align: left
    ;
+ }
+ h1 {
+   margin-bottom: 20px;
+ }
+ input {
+  flex: 1;
+  width: 100%;
+  max-width: 280px;
+  border: 0 ;
+  margin: 4px;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 5px;
+  height: 25px;
+ }
+ textarea {
+  flex: 1;
+  width: 100%;
+  max-width: 280px;
+  border: 0 ;
+  margin: 4px;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 5px;
+  height: 25px;
  }
 `;

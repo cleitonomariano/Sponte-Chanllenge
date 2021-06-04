@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from '../../Components/Container';
 
-const Home: React.FC = () => (
-  <>
+const Home: React.FC = () => {
+  return (
     <Container>
       <h1>Home</h1>
       <table>
@@ -15,7 +15,7 @@ const Home: React.FC = () => (
         </th>
       </table>
     </Container>
-  </>
-);
+  );
+};
 
 export default Home;
