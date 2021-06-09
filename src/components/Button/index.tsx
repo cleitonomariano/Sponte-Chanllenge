@@ -19,14 +19,5 @@ const Button: React.FC<ButtonProps> = styled.button`
   &:hover {
     background: ${shade(0.3, '#008396')};
   }
-  .buttonDiv .cancelar {
-    background: ${shade(0.3, '#008396')};
-    color: #fff;
-    border: 1px solid #970808;
-    &:hover {
-      background: #008396;
-      color: red;
-    }
-  }
 `;
 export default Button;

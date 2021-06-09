@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './routes';
-import GlobalStyle from './Styles/GlobalStyle';
+import GlobalStyle from './styles/GlobalStyle';
 
 const App: React.FC = () => (
   <>
