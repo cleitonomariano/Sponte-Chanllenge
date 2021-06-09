@@ -43,16 +43,5 @@ export default createGlobalStyle`
   border-radius: 4px;
   padding: 5px;
   height: 25px;
- }
- textarea {
-  flex: 1;
-  width: 100%;
-  max-width: 280px;
-  border: 0 ;
-  margin: 4px;
-  background: #ffffff;
-  border-radius: 4px;
-  padding: 5px;
-  height: 25px;
- }
+ } 
 `;

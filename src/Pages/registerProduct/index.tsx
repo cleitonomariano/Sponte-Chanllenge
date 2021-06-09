@@ -1,32 +1,25 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
 import React from 'react';
-import Button from '../../Components/Button';
-import Container from '../../Components/Container';
-import Input from '../../Components/Input';
+// import { Form } from '@unform/web';
+import Button from '../../components/Button';
+import Container from '../../components/Container';
+import Input from '../../components/Input';
+import { ProductType } from '../../types/product';
+import * as api from '../../utils/api';
 
-type ProductType = {
-  Title: string;
-  Width: number | null;
-  Height: number | null;
-  Length: number | null;
-  BarCode: number | null;
-  Weight: number | null;
-  Price: number | null;
-  Description: string;
-};
 const initialProduct: ProductType = {
-  Title: '',
-  Width: null,
-  Height: null,
-  Length: null,
-  BarCode: null,
-  Weight: null,
-  Price: null,
-  Description: '',
+  title: '',
+  width: null,
+  height: null,
+  length: null,
+  barCode: null,
+  weight: null,
+  price: null,
+  description: '',
 };
 function titleMaxLength(number: number, name: string, value: string): boolean {
-  return name === 'Title' && value.length > number;
+  return name === 'title' && value.length > number;
 }
 const RegisterProduct: React.FC = () => {
   const [product, setProduct] = React.useState<ProductType>(initialProduct);
@@ -44,8 +37,9 @@ const RegisterProduct: React.FC = () => {
   const handleSubmit = React.useCallback(
     (event: React.FormEvent<HTMLFormElement>): void => {
       event.preventDefault();
+      api.registerProduct(product);
     },
-    [],
+    [product],
   );
   return (
     <Container>
@@ -56,57 +50,59 @@ const RegisterProduct: React.FC = () => {
         </div>
         <Input
           onChange={handleChange}
-          name="Title"
+          name="title"
           type="text"
           placeholder="Title"
-          value={product.Title}
+          value={product.title}
         />
         <Input
           onChange={handleChange}
-          name="Width"
+          name="width"
           type="number"
           placeholder="Width"
-          value={String(product.Width)}
+          value={String(product.width)}
         />
         <Input
           onChange={handleChange}
-          name="Height"
+          name="height"
           type="number"
           placeholder="Height"
-          value={String(product.Height)}
+          value={String(product.height)}
         />
         <Input
           onChange={handleChange}
-          name="Length"
+          name="length"
           type="number"
           placeholder="Length"
-          value={String(product.Length)}
+          value={String(product.length)}
         />
         <Input
           onChange={handleChange}
-          name="BarCode"
+          name="barCode"
           type="number"
           placeholder="BarCode"
-          value={String(product.BarCode)}
+          value={String(product.barCode)}
         />
         <Input
           onChange={handleChange}
-          name="Weight"
+          name="weight"
           type="number"
           placeholder="Weight"
-          value={String(product.Weight)}
+          value={String(product.weight)}
         />
         <Input
           onChange={handleChange}
-          name="Price"
+          name="price"
           type="number"
           placeholder="Price:"
-          value={String(product.Price)}
+          value={String(product.price)}
         />
-        <textarea
-          name="Description"
+        <Input
+          onChange={handleChange}
+          type="text"
+          name="description"
           placeholder=" Description"
-          value={product.Description}
+          value={product.description}
         />
         <br />
         <Button className="cancelar" type="submit">
